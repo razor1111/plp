@@ -6,10 +6,11 @@
 	)
 )
 
-(defun somatorio (n,i) "Realiza somatorio"
-	(if (< i n)
-		(+ (+ (/ (fatorial i) (+ i 1)) (- i 1)) (somatorio n (+ i 1)))
-		0 
+
+(defun som (n i) "Calc somatorio"
+	(if (= i n)
+		0
+		(+ (som n (+ i 1)) (+ (/ (fatorial i) (+ i 1)) (- i 1)))
 	)
 )
 
