@@ -14,12 +14,12 @@
 	)
 )
 
-;4a questão da lista
 (defun verifica (lista) 
-	 (cond((equal lista nil)0) 
-		 ((integerp(car lista))(+ 1 (verifica(cdr lista))))
-		 )
-	 )
+	(cond ((equal lista nil) 0) 
+		((integerp (car lista)) (+ 1 (verifica (cdr lista))))
+		(t (verifica (cdr lista)))
+	)
+)
 
 ;5a quesyão da lista
 (defun operacoes ()
