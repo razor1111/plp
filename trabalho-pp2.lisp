@@ -1,18 +1,18 @@
 ;2a questão da lista
-(defun fatorial (n) "Calc fatorial de um numero"
+(defun fat (n) "Calc fatorial de um numero"
 	(if (<= n 0)
 		1
-		(* n (fatorial (- n 1)))
+		(* n (fat (- n 1)))
 	)
 )
 
 
-(defun som (n i) "Calc somatorio"
-	(if (= i n)
+(defun som (i) "Calc somatorio"
+	(if(= i 0)
 		0
-		(+ (som n (+ i 1)) (+ (/ (fatorial i) (+ i 1)) (- i 1)))
+		(+ (+ (/ (fat i) (+ i 1)) (- i 1))(som (- i 1))
 	)
-)
+))
 ;3a questão da lista
 (defun calc_quad (lista) 
 	(cond ((equal lista nil) 0) 
