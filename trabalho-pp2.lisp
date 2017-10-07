@@ -13,6 +13,17 @@
 		(+ (som n (+ i 1)) (+ (/ (fatorial i) (+ i 1)) (- i 1)))
 	)
 )
+;3a questão da lista
+(defun calc_quad (lista) 
+	(cond ((equal lista nil) 0) 
+		((and (integerp (car lista)) (= (mod (car lista) 2) 0)) (+ (calc_quad (cdr lista)) (quadrado (car lista))))
+		(t (calc_quad (cdr lista)))
+		)
+)
+
+(defun quadrado (x)
+ 	(* x x)
+)
 
 ;4a questão da lista
 (defun verifica (lista) 
