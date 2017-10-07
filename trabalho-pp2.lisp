@@ -14,6 +14,7 @@
 	)
 )
 
+;4a questão da lista
 (defun verifica (lista) 
 	(cond ((equal lista nil) 0) 
 		((integerp (car lista)) (+ 1 (verifica (cdr lista))))
@@ -21,7 +22,7 @@
 	)
 )
 
-;5a quesyão da lista
+;5a questão da lista
 (defun operacoes ()
 	(setf x (read)) (setf y (read))
 	(format t "A lista Resultante: ~S~%"(list(+ x y)(- x y)(* x y)(/ x y))
