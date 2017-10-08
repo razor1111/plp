@@ -34,8 +34,8 @@
 )
 
 ;5a questão da lista
-(defun operacoes ()
-	(setf x (read)) (setf y (read))
-	(format t "A lista Resultante: ~S~%"(list(+ x y)(- x y)(* x y)(/ x y))
-		)
-	)
+(defun resultante(x y) (format t "A lista Resultante: ~S~%" (list (setq s(+ x y))(setq sub (- x y))(setq mult(* x y))(setq div(/ x y)))))
+ 
+(defun ordena (s sub mult div) (format t "A lista Ordenada em forma Crescente:~S" (sort (cons s (cons sub (cons mult (cons div nil)))) #'<)))
+
+(defun entrada () (print "Digite o primeiro valor: ") (setf x (read)) (print "Digite o segundo valor: ") (setf y (read)) (resultante x y) (ordena s sub mult div))
